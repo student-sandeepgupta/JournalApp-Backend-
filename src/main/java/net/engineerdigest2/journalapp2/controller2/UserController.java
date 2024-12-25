@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.engineerdigest2.journalapp2.service2.UserService;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/user")
@@ -43,4 +45,12 @@ public class UserController {
         }
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+@GetMapping("hello")
+public String getMethodName(@RequestParam String param) {
+    return "hello sandeep ";
 }
+
+   
+    }
+    
+
